@@ -590,10 +590,6 @@ video {
   left: 20rem;
 }
 
-.flex {
-  display: flex;
-}
-
 .h-full {
   height: 100%;
 }
@@ -608,14 +604,6 @@ video {
 
 .w-80 {
   width: 20rem;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 
 .overflow-hidden {
@@ -644,19 +632,6 @@ video {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.uppercase {
-  text-transform: uppercase;
 }
 
 .text-gray-50 {
