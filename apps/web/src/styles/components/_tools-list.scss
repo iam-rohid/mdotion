@@ -1,0 +1,32 @@
+@use "../variables/colors";
+
+.tools-list {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  flex-direction: row;
+  button {
+    display: flex;
+    width: 2em;
+    height: 2em;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25em;
+    svg {
+      font-size: 1.25em;
+      color: var(--clr-gray-600);
+    }
+    &:hover {
+      background-color: var(--clr-gray-100);
+    }
+    &:active {
+      background-color: var(--clr-gray-200);
+    }
+    &:hover,
+    &:active {
+      svg {
+        color: var(--clr-gray-900);
+      }
+    }
+  }
+}

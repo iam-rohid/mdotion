@@ -1,0 +1,17 @@
+#app {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  .sidebar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 3.5rem;
+    width: 240px;
+  }
+  .app-content {
+    margin-left: 240px;
+    height: 100%;
+  }
+}

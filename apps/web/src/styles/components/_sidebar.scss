@@ -1,0 +1,6 @@
+@use "../variables/colors";
+
+.sidebar,
+.notes-list {
+  border-right: 1px solid var(--clr-gray-100);
+}

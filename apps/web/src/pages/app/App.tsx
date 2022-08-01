@@ -1,13 +1,12 @@
-import AppBar from "@/components/app-nav-bar/AppNavBar";
-import AppSideBar from "@/components/app-side-bar/AppSideBar";
+import AppBar from "@/components/navbar/NavBar";
+import SideBar from "@/components/sidebar/SideBar";
 import { Outlet } from "@tanstack/react-location";
-import "./App.scss";
 
 const App = () => {
   return (
-    <div className="app-wrapper">
+    <div id="app">
       <AppBar />
-      <AppSideBar />
+      <SideBar />
       <div className="app-content">
         <Outlet />
       </div>
