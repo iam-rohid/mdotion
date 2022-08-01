@@ -1,0 +1,27 @@
+.app-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  .app-nav-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3.5rem;
+  }
+  .app-side-bar {
+    position: absolute;
+    left: 0;
+    top: 3.5rem;
+    bottom: 0;
+    width: 240px;
+  }
+  .app-content {
+    position: absolute;
+    left: 240px;
+    top: 3.5rem;
+    bottom: 0;
+    right: 0;
+  }
+}
