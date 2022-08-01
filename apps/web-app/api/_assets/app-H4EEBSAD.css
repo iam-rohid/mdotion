@@ -595,10 +595,6 @@ video {
   left: 20rem;
 }
 
-.left-64 {
-  left: 16rem;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -669,10 +665,6 @@ video {
 
 .w-8 {
   width: 2rem;
-}
-
-.w-64 {
-  width: 16rem;
 }
 
 .max-w-xs {
