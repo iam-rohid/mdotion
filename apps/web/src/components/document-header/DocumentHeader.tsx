@@ -36,7 +36,6 @@ const DocumentHeader = ({
           className="title-input"
           onBlur={handleBlur}
           onKeyDown={(e) => {
-            console.log(e);
             switch (e.code) {
               case "Enter":
                 setIsTitleEditing(false);

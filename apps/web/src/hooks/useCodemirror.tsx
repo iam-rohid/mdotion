@@ -2,9 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { basicSetup } from "codemirror";
 import { EditorView, keymap, placeholder } from "@codemirror/view";
 import { indentWithTab } from "@codemirror/commands";
-import { markdown } from "@codemirror/lang-markdown";
+import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
 import { EditorState, Compartment } from "@codemirror/state";
-
 export const languageComp = new Compartment();
 export const tabSizeComp = new Compartment();
 export const lineWrappingComp = new Compartment();
@@ -17,7 +16,6 @@ const useCodeMirror = ({
   initValue: string;
   onChange?: (vlaue: string) => void;
 }) => {
-  console.log(initValue);
   const editorRef = useRef<HTMLDivElement>(null);
   const [editorView, setEditorView] = useState<EditorView | null>(null);
 

@@ -1,5 +1,7 @@
-import useCodeMirror from "@/hooks/useCodemirror";
+import useCodeMirror, { languageComp } from "@/hooks/useCodemirror";
 import { useEffect } from "react";
+import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
+import { markdownCompletions } from "@/utils/completions";
 
 type Props = {
   initValue: string;
@@ -16,6 +18,14 @@ const DocumentEditor = (props: Props) => {
   useEffect(() => {
     if (!editorView) return;
     editorView.focus();
+    editorView.dispatch({
+      effects: languageComp.reconfigure([
+        markdown(),
+        markdownLanguage.data.of({
+          autocomplete: markdownCompletions,
+        }),
+      ]),
+    });
   }, [editorView]);
 
   return <div className="document-editor" ref={editorRef} />;

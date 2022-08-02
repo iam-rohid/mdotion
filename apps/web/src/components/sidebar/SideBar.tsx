@@ -8,11 +8,7 @@ import { useState } from "react";
 const SideBar = () => {
   const [isFolded, setIsFolded] = useState(false);
   const [title, setTitle] = useState("Notebooks");
-  const query = useQuery(["notebooks"], getAllNotebooksAsync, {
-    onSuccess(data) {
-      console.log(data);
-    },
-  });
+  const query = useQuery(["notebooks"], getAllNotebooksAsync);
 
   if (isFolded) {
     return (
