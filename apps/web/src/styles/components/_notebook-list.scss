@@ -1,6 +1,7 @@
 @use "../variables/colors" as *;
 
 .notebook-list {
+  list-style: none;
   & > li {
     display: flex;
     position: relative;

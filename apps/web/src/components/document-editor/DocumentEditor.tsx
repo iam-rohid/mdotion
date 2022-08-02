@@ -2,22 +2,7 @@ import useCodeMirror, { themeComp } from "@/hooks/useCodemirror";
 import { useEffect } from "react";
 import { EditorView } from "codemirror";
 
-const fixedHeightEditor = EditorView.baseTheme({
-  "&": {
-    height: "100%",
-  },
-  ".cm-content": {
-    paddingTop: "3rem",
-    paddingBottom: "50vh",
-    maxWidth: "512px",
-    marginInline: "auto",
-    fontFamily: `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
-  },
-  "& .cm-gutters": {
-    display: "none",
-  },
-});
+const fixedHeightEditor = EditorView.baseTheme({});
 
 type Props = {
   initValue: string;

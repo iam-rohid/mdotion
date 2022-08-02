@@ -2,7 +2,7 @@ import { getNoteById, updateNoteAsync } from "@/api/noteApi";
 import DocumentEditor from "@/components/document-editor/DocumentEditor";
 import DocumentPreview from "@/components/document-preview/DocumentPreview";
 import { useMatch } from "@tanstack/react-location";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { useCallback, useEffect, useState } from "react";
 import {
   MdEdit,
