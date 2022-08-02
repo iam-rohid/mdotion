@@ -1,0 +1,28 @@
+@use "../variables/colors" as *;
+
+.form {
+  .form-field {
+    label {
+      display: block;
+      font-size: 0.875em;
+      margin-bottom: 0.5em;
+    }
+    input[type="text"] {
+      display: block;
+      width: 100%;
+      padding-inline: 1em;
+      height: 2.5em;
+      border-radius: 0.375em;
+      background-color: $color-gray-100;
+      border: none;
+      outline: none;
+      font-size: 1em;
+      &:focus {
+        box-shadow: 0 0 0 1px $color-gray-200;
+      }
+      &:active {
+        box-shadow: 0 0 0 2px $color-gray-200;
+      }
+    }
+  }
+}

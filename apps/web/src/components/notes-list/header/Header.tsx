@@ -1,12 +1,17 @@
 import { MdNoteAdd } from "react-icons/md";
 
-const Header = () => {
+type Props = {
+  title: string;
+  onCreateNoteClick?: () => void;
+};
+const Header = (props: Props) => {
+  const { title, onCreateNoteClick } = props;
   return (
     <div className="header">
-      <h3>Notes</h3>
+      <h3>{title}</h3>
       <ul role="list" className="tools-list">
         <li>
-          <button>
+          <button onClick={onCreateNoteClick}>
             <MdNoteAdd />
           </button>
         </li>

@@ -1,4 +1,4 @@
-@use "../variables/colors";
+@use "../variables/colors" as *;
 
 .tools-list {
   display: flex;
@@ -11,21 +11,21 @@
     height: 2em;
     align-items: center;
     justify-content: center;
-    border-radius: 0.25em;
+    border-radius: 0.375em;
     svg {
       font-size: 1.25em;
-      color: var(--clr-gray-600);
+      color: $color-gray-600;
     }
     &:hover {
-      background-color: var(--clr-gray-100);
+      background-color: $color-gray-100;
     }
     &:active {
-      background-color: var(--clr-gray-200);
+      background-color: $color-gray-200;
     }
     &:hover,
     &:active {
       svg {
-        color: var(--clr-gray-900);
+        color: $color-gray-900;
       }
     }
   }

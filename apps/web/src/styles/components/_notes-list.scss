@@ -1,0 +1,53 @@
+@use "../variables/colors" as *;
+
+.notes-list {
+  & > li {
+    display: flex;
+    position: relative;
+    & > a {
+      padding: 0.5em 1em;
+      color: $color-gray-600;
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $color-gray-900;
+      p:nth-child(1) {
+        font-weight: 500;
+        margin-bottom: 0.125em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      p:nth-child(2) {
+        font-size: 0.875em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        b {
+          color: $color-gray-700;
+        }
+        span {
+          color: $color-gray-500;
+        }
+      }
+      &:hover {
+        color: $color-gray-900;
+        background-color: $color-gray-100;
+      }
+      &.active {
+        background-color: $color-accent-500;
+        color: $color-gray-50;
+        p:nth-child(2) {
+          font-size: 0.875em;
+          b {
+            color: $color-accent-100;
+          }
+          span {
+            color: $color-accent-200;
+          }
+        }
+      }
+    }
+  }
+}

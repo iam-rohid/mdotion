@@ -1,0 +1,78 @@
+@use "../variables/colors" as *;
+
+.notebook-list {
+  & > li {
+    display: flex;
+    position: relative;
+    & > a {
+      padding: 0.5em 1em;
+      color: $color-gray-600;
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 500;
+      &:hover {
+        color: $color-gray-900;
+        background-color: $color-gray-100;
+      }
+      &.active {
+        background-color: $color-accent-500;
+        color: $color-gray-50;
+      }
+    }
+    button.options {
+      display: none;
+      width: 1.75em;
+      height: 1.75em;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      right: 0.5em;
+      transform: translateY(-50%);
+      border-radius: 0.375em;
+      svg {
+        color: $color-gray-600;
+        font-size: 1.25em;
+      }
+      &:hover {
+        background-color: $color-gray-100;
+      }
+      &:active {
+        background-color: $color-gray-200;
+      }
+      &:hover,
+      &:active {
+        svg {
+          columns: $color-gray-900;
+        }
+      }
+    }
+    & > a.active ~ button.options {
+      svg {
+        color: $color-accent-300;
+      }
+      &:hover {
+        background-color: $color-accent-400;
+      }
+      &:active {
+        background-color: $color-accent-300;
+      }
+      &:hover,
+      &:active {
+        svg {
+          color: $color-accent-50;
+        }
+      }
+    }
+    &:hover {
+      button.options {
+        display: flex;
+      }
+      & > a {
+        padding-right: 2em;
+      }
+    }
+  }
+}

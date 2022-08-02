@@ -1,12 +1,21 @@
-:root {
-  --clr-gray-50: #fafafa;
-  --clr-gray-100: #f4f4f5;
-  --clr-gray-200: #e4e4e7;
-  --clr-gray-300: #d4d4d8;
-  --clr-gray-400: #a1a1aa;
-  --clr-gray-500: #71717a;
-  --clr-gray-600: #52525b;
-  --clr-gray-700: #3f3f46;
-  --clr-gray-800: #27272a;
-  --clr-gray-900: #18181b;
-}
+$color-gray-50: #fafafa;
+$color-gray-100: #f4f4f5;
+$color-gray-200: #e4e4e7;
+$color-gray-300: #d4d4d8;
+$color-gray-400: #a1a1aa;
+$color-gray-500: #71717a;
+$color-gray-600: #52525b;
+$color-gray-700: #3f3f46;
+$color-gray-800: #27272a;
+$color-gray-900: #18181b;
+
+$color-accent-50: #eff6ff;
+$color-accent-100: #dbeafe;
+$color-accent-200: #bfdbfe;
+$color-accent-300: #93c5fd;
+$color-accent-400: #60a5fa;
+$color-accent-500: #3b82f6;
+$color-accent-600: #2563eb;
+$color-accent-700: #1d4ed8;
+$color-accent-800: #1e40af;
+$color-accent-900: #1e3a8a;

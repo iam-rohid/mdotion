@@ -3,10 +3,12 @@ import {
   Route,
   DefaultGenerics,
   ReactLocation,
+  Outlet,
 } from "@tanstack/react-location";
 import App from "./pages/app/App";
 import Notebook from "./pages/notebook/Notebook";
 import Note from "./pages/note/Note";
+import { ReactLocationDevtools } from "@tanstack/react-location-devtools";
 
 export const routes: Route<DefaultGenerics>[] = [
   {
@@ -30,7 +32,14 @@ export const routes: Route<DefaultGenerics>[] = [
 export const location = new ReactLocation();
 
 const AppRouter = () => {
-  return <BrowserRouter routes={routes} location={location} />;
+  return (
+    <>
+      <BrowserRouter routes={routes} location={location}>
+        <Outlet />
+        <ReactLocationDevtools />
+      </BrowserRouter>
+    </>
+  );
 };
 
 export default AppRouter;

@@ -1,11 +1,11 @@
-@use "../variables/colors";
+@use "../variables/colors" as *;
 
 .header {
   height: 3rem;
   display: flex;
   align-items: center;
-  padding-inline: 1rem;
-  border-bottom: 1px solid var(--clr-gray-100);
+  padding-inline: 0.5rem;
+  border-bottom: 1px solid $color-gray-100;
   h3 {
     display: block;
     flex: 1;
@@ -13,5 +13,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     text-transform: uppercase;
+    padding: 0.25em 0.5em;
   }
 }

@@ -3,6 +3,8 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   .sidebar {
     position: absolute;
     left: 0;
@@ -13,5 +15,7 @@
   .app-content {
     margin-left: 240px;
     height: 100%;
+    flex: 1;
+    overflow: hidden;
   }
 }

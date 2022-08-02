@@ -3,5 +3,4 @@ export interface Notebook {
   createdAt: string;
   updatedAt: string;
   title: string;
-  description?: string;
 }

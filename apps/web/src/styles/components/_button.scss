@@ -1,0 +1,33 @@
+@use "../variables/colors" as *;
+
+.button {
+  font-size: 1em;
+  font-weight: 500;
+
+  &.primary,
+  &.secondary {
+    padding-inline: 1em;
+    padding-block: 0.5em;
+    border-radius: 0.375em;
+  }
+
+  &.primary {
+    background-color: $color-accent-500;
+    color: $color-gray-50;
+    &:hover {
+      background-color: $color-accent-600;
+    }
+    &:active {
+      background-color: $color-accent-700;
+    }
+  }
+
+  &.secondary {
+    &:hover {
+      background-color: $color-gray-100;
+    }
+    &:active {
+      background-color: $color-gray-200;
+    }
+  }
+}
