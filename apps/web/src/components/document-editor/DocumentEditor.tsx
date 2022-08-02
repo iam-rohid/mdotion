@@ -1,8 +1,5 @@
-import useCodeMirror, { themeComp } from "@/hooks/useCodemirror";
+import useCodeMirror from "@/hooks/useCodemirror";
 import { useEffect } from "react";
-import { EditorView } from "codemirror";
-
-const fixedHeightEditor = EditorView.baseTheme({});
 
 type Props = {
   initValue: string;
@@ -18,9 +15,6 @@ const DocumentEditor = (props: Props) => {
 
   useEffect(() => {
     if (!editorView) return;
-    editorView.dispatch({
-      effects: themeComp.reconfigure(fixedHeightEditor),
-    });
   }, [editorView]);
 
   return <div className="document-editor" ref={editorRef} />;

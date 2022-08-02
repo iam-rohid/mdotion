@@ -5,6 +5,7 @@ import { useMatch } from "@tanstack/react-location";
 import { useQuery } from "@tanstack/react-query";
 import { useCallback, useEffect, useState } from "react";
 import {
+  MdCode,
   MdEdit,
   MdMoreVert,
   MdSplitscreen,
@@ -113,7 +114,9 @@ const Header = ({
           }}
         />
       ) : (
-        <h3 onClick={() => setIsTitleEditing(true)}>{title}</h3>
+        <button onClick={() => setIsTitleEditing(true)}>
+          <h3>{title}</h3>
+        </button>
       )}
       <ul className="tools-list">
         <li>
@@ -127,7 +130,7 @@ const Header = ({
                 }}
               />
             ) : (
-              <MdEdit />
+              <MdCode />
             )}
           </button>
         </li>

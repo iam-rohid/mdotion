@@ -15,7 +15,6 @@
       font-weight: 500;
       &:hover {
         color: $color-gray-900;
-        background-color: $color-gray-100;
       }
       &.active {
         background-color: $color-accent-500;
@@ -24,8 +23,8 @@
     }
     button.options {
       display: none;
-      width: 1.75em;
-      height: 1.75em;
+      width: 1.5em;
+      height: 1.5em;
       align-items: center;
       justify-content: center;
       position: absolute;
@@ -52,7 +51,7 @@
     }
     & > a.active ~ button.options {
       svg {
-        color: $color-accent-300;
+        color: $color-accent-200;
       }
       &:hover {
         background-color: $color-accent-400;
@@ -72,7 +71,7 @@
         display: flex;
       }
       & > a {
-        padding-right: 2em;
+        padding-right: 2.125em;
       }
     }
   }

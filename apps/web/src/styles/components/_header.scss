@@ -6,13 +6,22 @@
   align-items: center;
   padding-inline: 0.5rem;
   border-bottom: 1px solid $color-gray-100;
-  h3 {
-    display: block;
+  & > button {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    text-align: start;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-transform: uppercase;
-    padding: 0.25em 0.5em;
+    h3 {
+      display: block;
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-transform: uppercase;
+      padding: 0.25em 0.5em;
+    }
   }
 }

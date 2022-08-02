@@ -1,16 +1,24 @@
+@use "../variables/constants" as *;
+
 #notebook {
   position: relative;
   width: 100%;
   height: 100%;
-  .sidebar {
+  & > .sidebar {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    width: 280px;
+    width: $sidebar-width;
+    &.folded {
+      width: $folded-sidebar-width;
+      & ~ .notebook-content {
+        margin-left: $folded-sidebar-width;
+      }
+    }
   }
   .notebook-content {
-    margin-left: 280px;
+    margin-left: $sidebar-width;
     height: 100%;
   }
 }

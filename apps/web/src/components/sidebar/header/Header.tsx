@@ -2,7 +2,10 @@ import CreateNotebookModal from "@/components/create-notebook-modal/CreateNotebo
 import { useCallback, useState } from "react";
 import { MdCreateNewFolder } from "react-icons/md";
 
-const AppSideBarHeader = () => {
+type Props = {
+  onFold?: () => void;
+};
+const AppSideBarHeader = ({ onFold }: Props) => {
   const [isCreateNotebookModalOpen, setIsCreateNotebookModalOpen] =
     useState(false);
 
@@ -16,7 +19,9 @@ const AppSideBarHeader = () => {
 
   return (
     <div className="header">
-      <h3>Notebooks</h3>
+      <button onClick={onFold}>
+        <h3>Notebooks</h3>
+      </button>
       <ul role="list" className="tools-list">
         <li>
           <button onClick={handleOpenCreateNotebookModal}>

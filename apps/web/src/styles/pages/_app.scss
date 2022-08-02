@@ -1,3 +1,5 @@
+@use "../variables/constants" as *;
+
 #app {
   width: 100vw;
   height: 100vh;
@@ -5,15 +7,21 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  .sidebar {
+  & > .sidebar {
     position: absolute;
     left: 0;
     bottom: 0;
     top: 3.5rem;
-    width: 240px;
+    width: $sidebar-width;
+    &.folded {
+      width: $folded-sidebar-width;
+      & ~ .app-content {
+        margin-left: $folded-sidebar-width;
+      }
+    }
   }
   .app-content {
-    margin-left: 240px;
+    margin-left: $sidebar-width;
     height: 100%;
     flex: 1;
     overflow: hidden;

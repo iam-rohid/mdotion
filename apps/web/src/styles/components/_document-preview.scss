@@ -1,0 +1,12 @@
+@use "../variables/constants" as *;
+
+.document-preview {
+  overflow-x: hidden;
+  overflow-y: auto;
+  .preview-wrapper {
+    width: 100%;
+    max-width: $document-max-width;
+    margin-inline: auto;
+    padding: $document-padding;
+  }
+}

@@ -1,6 +1,24 @@
 @use "../variables/colors" as *;
 
-.sidebar,
-.notes-list {
+.sidebar {
   border-right: 1px solid $color-gray-100;
+  &.folded {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-block: 1rem;
+    & > button {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      overflow: hidden;
+      h3 {
+        writing-mode: vertical-rl;
+        text-transform: uppercase;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
 }
