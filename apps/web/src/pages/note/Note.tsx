@@ -1,18 +1,11 @@
 import { getNoteById, updateNoteAsync } from "@/api/noteApi";
 import DocumentEditor from "@/components/document-editor/DocumentEditor";
+import DocumentHeader from "@/components/document-header/DocumentHeader";
 import DocumentPreview from "@/components/document-preview/DocumentPreview";
+import { DocView } from "@/types";
 import { useMatch } from "@tanstack/react-location";
 import { useQuery } from "@tanstack/react-query";
 import { useCallback, useEffect, useState } from "react";
-import {
-  MdCode,
-  MdEdit,
-  MdMoreVert,
-  MdSplitscreen,
-  MdVisibility,
-} from "react-icons/md";
-
-type DocView = "editor" | "preview" | "side-by-side";
 
 const Note = () => {
   const {
@@ -50,19 +43,11 @@ const Note = () => {
 
   return (
     <div id="note">
-      <Header
+      <DocumentHeader
         title={title}
         onTitleChange={handleTitleChange}
-        onViewToggle={() =>
-          setDocView(
-            docView === "editor"
-              ? "preview"
-              : docView === "preview"
-              ? "side-by-side"
-              : "editor"
-          )
-        }
         docView={docView}
+        onDocViewChange={setDocView}
       />
       <div className={`note-content ${docView}`}>
         <DocumentEditor
@@ -76,70 +61,3 @@ const Note = () => {
 };
 
 export default Note;
-
-const Header = ({
-  title,
-  onTitleChange,
-  onViewToggle,
-  docView,
-}: {
-  title: string;
-  onTitleChange: (value: string) => void;
-  docView: DocView;
-  onViewToggle: () => void;
-}) => {
-  const [isTitleEditing, setIsTitleEditing] = useState(false);
-
-  const handleBlur = useCallback(() => {
-    setIsTitleEditing(false);
-  }, [title]);
-
-  return (
-    <div className="header">
-      {isTitleEditing ? (
-        <input
-          value={title}
-          onChange={(e) => onTitleChange(e.target.value)}
-          autoFocus
-          className="title-input"
-          onBlur={handleBlur}
-          onKeyDown={(e) => {
-            console.log(e);
-            switch (e.code) {
-              case "Enter":
-                setIsTitleEditing(false);
-              case "Escape":
-                setIsTitleEditing(false);
-            }
-          }}
-        />
-      ) : (
-        <button onClick={() => setIsTitleEditing(true)}>
-          <h3>{title}</h3>
-        </button>
-      )}
-      <ul className="tools-list">
-        <li>
-          <button onClick={onViewToggle}>
-            {docView === "preview" ? (
-              <MdVisibility />
-            ) : docView === "side-by-side" ? (
-              <MdSplitscreen
-                style={{
-                  transform: `rotateZ(90deg)`,
-                }}
-              />
-            ) : (
-              <MdCode />
-            )}
-          </button>
-        </li>
-        <li>
-          <button>
-            <MdMoreVert />
-          </button>
-        </li>
-      </ul>
-    </div>
-  );
-};

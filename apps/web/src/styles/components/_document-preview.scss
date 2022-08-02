@@ -3,10 +3,10 @@
 .document-preview {
   overflow-x: hidden;
   overflow-y: auto;
+  padding: $document-padding;
   .preview-wrapper {
     width: 100%;
     max-width: $document-max-width;
     margin-inline: auto;
-    padding: $document-padding;
   }
 }

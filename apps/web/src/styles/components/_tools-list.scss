@@ -3,7 +3,7 @@
 .tools-list {
   display: flex;
   align-items: center;
-  gap: 0.25em;
+  gap: 0.5em;
   flex-direction: row;
   list-style: none;
   button {
@@ -28,6 +28,24 @@
       svg {
         color: $color-gray-900;
       }
+    }
+  }
+  button.active {
+    background-color: #fff;
+    svg {
+      color: $color-gray-900;
+    }
+  }
+  .button-group {
+    display: flex;
+    list-style: none;
+    background-color: $color-gray-100;
+    border-radius: 0.375em;
+    padding: 2px;
+    button {
+      width: 1.875rem;
+      height: 1.875rem;
+      border-radius: 0.25em;
     }
   }
 }

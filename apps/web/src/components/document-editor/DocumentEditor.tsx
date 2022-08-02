@@ -15,6 +15,7 @@ const DocumentEditor = (props: Props) => {
 
   useEffect(() => {
     if (!editorView) return;
+    editorView.focus();
   }, [editorView]);
 
   return <div className="document-editor" ref={editorRef} />;

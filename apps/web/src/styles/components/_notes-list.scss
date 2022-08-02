@@ -2,6 +2,7 @@
 
 .notes-list {
   list-style: none;
+  padding: 0.5em;
   & > li {
     display: flex;
     position: relative;
@@ -12,7 +13,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      color: $color-gray-900;
+      border-radius: 0.375em;
       p:nth-child(1) {
         font-weight: 500;
         margin-bottom: 0.125em;
@@ -26,28 +27,18 @@
         overflow: hidden;
         text-overflow: ellipsis;
         b {
-          color: $color-gray-700;
+          opacity: 0.8;
         }
         span {
-          color: $color-gray-500;
+          opacity: 0.5;
         }
       }
       &:hover {
         color: $color-gray-900;
-        background-color: $color-gray-100;
       }
       &.active {
         background-color: $color-accent-500;
-        color: $color-gray-50;
-        p:nth-child(2) {
-          font-size: 0.875em;
-          b {
-            color: $color-accent-100;
-          }
-          span {
-            color: $color-accent-200;
-          }
-        }
+        color: $color-accent-50;
       }
     }
   }

@@ -2,7 +2,7 @@ import AppSideBarHeader from "./header/Header";
 import { useQuery } from "@tanstack/react-query";
 import { getAllNotebooksAsync } from "@/api/notebookApi";
 import { Link } from "@tanstack/react-location";
-import { MdMoreHoriz } from "react-icons/md";
+import { MdFolder, MdMoreHoriz } from "react-icons/md";
 import { useState } from "react";
 
 const SideBar = () => {
@@ -30,7 +30,11 @@ const SideBar = () => {
       <ul className="notebook-list">
         {(query.data ?? []).map((notebook) => (
           <li key={notebook.id}>
-            <Link to={`${notebook.id}`}>{notebook.title}</Link>
+            <Link to={`${notebook.id}`}>
+              <MdFolder />
+              <p>{notebook.title}</p>
+              <span>2</span>
+            </Link>
             <button className="options">
               <MdMoreHoriz />
             </button>
